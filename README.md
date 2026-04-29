@@ -1,82 +1,27 @@
-# Practical lesson pz-GOF  
-# Реалізація GOF патернів проєктування  
+# Реалізація GoF патернів на TypeScript
 
-> У цьому занятті студенти отримують практичний досвід імплементації класичних патернів проєктування (GoF — Gang of Four).  
-> Мета — навчитися застосовувати породжувальні, структурні та поведінкові патерни для покращення архітектури програмних рішень.
+Цей проєкт демонструє практичне застосування класичних патернів проєктування Gang of Four.
 
+## Перелік патернів
 
-## What need to do:
-* Ознайомитися з основними групами патернів GoF:
-  * Породжувальні (Creational)
-  * Структурні (Structural)
-  * Поведінкові (Behavioral)
-* Реалізувати:
-  * **2 породжувальні патерни** (наприклад: Factory Method, Abstract Factory, Builder, Singleton, Prototype)
-  * **2 структурні патерни** (наприклад: Adapter, Facade, Decorator, Composite, Proxy, Bridge)
-  * **2 поведінковий патерн** (наприклад: Strategy, Observer, Command, Iterator, Chain of Responsibility)
-* Продемонструвати роботу кожного патерна (консольний приклад або простий сценарій)
-* Пояснити, яку проблему вирішує кожен патерн
-* Порівняти, як патерни покращують архітектуру коду порівняно з «анти-прикладами»
-* Підготувати коротку документацію в README.md
+### 1. Породжувальні
+- **Singleton**: Гарантує наявність лише одного екземпляра класу. Запобігає конфліктам ресурсів.
+- **Factory Method**: Надає інтерфейс для створення об'єктів, дозволяючи підкласам змінювати тип створюваних об'єктів.
 
+### 2. Структурні
+- **Adapter**: Дозволяє об'єктам із несумісними інтерфейсами працювати разом.
+- **Decorator**: Дозволяє динамічно додавати об'єкту нову функціональність, обгортаючи його в "обгортку".
 
-## Acceptance criteria
-* Використовуючи мову програмування Typescript
-* Реалізовано **мінімум 5 патернів**:
-  * 2 породжувальні
-  * 2 структурні
-  * 2 поведінковий
-* Кожен патерн:
-  * реалізований у окремій директорії  
-  * має зрозумілий приклад застосування  
-  * має коротке пояснення призначення  
-  * демонструє очікувану роботу (через console.log або unit-тест)
-* Код структурований за групами патернів
-* README.md містить:
-  * опис реалізованих патернів  
-  * приклади запуску  
-  * короткі висновки  
-* Самостійна робота виконана:
-  * додаткові патерни / додаткові приклади / альтернативні реалізації (опціонально)
-* Проєкт успішно запускається
+### 3. Поведінкові
+- **Strategy**: Визначає сімейство алгоритмів, роблячи їх взаємозамінними прямо під час виконання.
+- **Observer**: Створює механізм підписки, що дозволяє об'єктам стежити за подіями в інших об'єктах.
 
-## Directory Structure
+## Як запустити
+1. Встановіть залежності: `npm install`
+2. Запустіть демонстрацію: `npx ts-node src/examples/run-all.ts`
 
-```
-├── pz-GOF
-│   ├── src
-│   │   ├── creational
-│   │   │   ├── factory-method
-│   │   │   ├── builder
-│   │   │   └── singleton
-│   │   ├── structural
-│   │   │   ├── adapter
-│   │   │   ├── facade
-│   │   │   └── decorator
-│   │   ├── behavioral
-│   │   │   ├── strategy
-│   │   │   └── observer
-│   ├── examples
-│   │   ├── run-all.ts
-│   ├── .editorconfig
-│   ├── .gitignore
-│   ├── package.json
-│   ├── README.md
-└──
-
-```
-## Useful links
-
-[Refactoring Guru — Патерни проєктування](https://refactoring.guru/uk/design-patterns)
-
-[Design Patterns in JavaScript](https://www.patterns.dev/posts/classic-design-patterns/)
-
-[Head First Design Patterns (book)](https://www.oreilly.com/library/view/head-first-design/0596007124/)
-
-[JavaScript Design Patterns — Addy Osmani](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-
-[Gang of Four (GoF) Patterns Overview](https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns)
-
-[Ти мусиш знати ці патерни проєктування!](https://www.youtube.com/watch?v=Dc6AEjHvpP8)
-
-[abstract-factory-pattern](https://medium.com/@artemkhrenov/abstract-factory-pattern-implementation-in-javascript-7d05c99842b4)
+## Висновки
+Використання патернів дозволяє зробити код:
+1. **Гнучким** (легко додавати нові фічі).
+2. **Тестованим** (компоненти розділені).
+3. **Зрозумілим** для інших розробників, оскільки використовується стандартна "термінологія" архітектури.
